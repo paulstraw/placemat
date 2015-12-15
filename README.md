@@ -9,6 +9,7 @@ Should there be an `/images/colors` endpoint, or something like `overlay_color` 
 `rake db:seed_fu`
 
 http://localhost:3000/images/places?w=200&h=300&txt=hellotherefriend&overlay_color=ff0000&overlay_opacity=40
+http://localhost:3000/images/places?w=200&h=300&txt=hellotherefriend&overlay_color=007777&overlay_opacity=42
 
 ## Image Endpoints
 

@@ -40,7 +40,7 @@ private
       txtclr: params[:txtclr] || 'fff',
       txtalign: 'middle,center',
       txtfit: 'max',
-      txtsize: 2000,
+      txtsize: 50,
       txtfont: 'Avenir Next Demi,Bold'
     }
   end
