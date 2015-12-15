@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  native_width: 1
+  native_height: 1
+  image_category: 
+
+two:
+  native_width: 1
+  native_height: 1
+  image_category: 

@@ -1,0 +1,12 @@
+production:
+  bucket: yourbucketname-production
+  access_key_id: loremaccess
+  secret_access_key: ipsumsecret
+development:
+  bucket: yourbucketname-development
+  access_key_id: loremaccess
+  secret_access_key: ipsumsecret
+test:
+  bucket: yourbucketname-test
+  access_key_id: loremaccess
+  secret_access_key: ipsumsecret
