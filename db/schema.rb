@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215094024) do
+ActiveRecord::Schema.define(version: 20151216061410) do
 
   create_table "placeholder_images", force: :cascade do |t|
     t.integer  "native_width",       null: false
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20151215094024) do
     t.integer  "image_category",     null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "slug"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "url_hash"
   end
 
   add_index "placeholder_images", ["image_category"], name: "index_placeholder_images_on_image_category"

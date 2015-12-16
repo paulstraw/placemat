@@ -13,7 +13,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'imgix', '~> 1.0.0'
 gem 'paperclip', '~> 4.3.2'
 gem 'aws-sdk', '~> 1.6'
-gem 'seed-fu', '~> 2.3.5'
 
 group :development, :test do
   gem 'byebug'
