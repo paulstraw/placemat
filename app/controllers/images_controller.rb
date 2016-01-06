@@ -12,13 +12,18 @@ private
   def get_placeholder_image
     categorized_images = PlaceholderImage.send(params[:category].to_sym)
 
-    if params[:w].nil? && params[:h].nil?
-      @text = ''
+    if params[:random] == '1' || (params[:w].nil? && params[:h].nil?)
       categorized_images.random
     else
-      @text = "#{params[:w]}x#{params[:h]}"
       categorized_images.closest_to_size(**requested_size).first
     end
+
+  end
+
+  def text
+    params[:txt] == '0' || (params[:w].nil? && params[:h].nil?) ?
+      '' :
+      "#{params[:w]}x#{params[:h]}"
   end
 
   def requested_size
@@ -26,8 +31,6 @@ private
   end
 
   def ix_text_params
-    text = params[:txt] || @text
-
     {
       txt: text,
       txtclr: params[:txtclr] || 'BFFF',
