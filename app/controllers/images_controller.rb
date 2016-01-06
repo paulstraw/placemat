@@ -26,7 +26,7 @@ private
     elsif params[:txt]
       params[:txt]
     else
-      "#{params[:w]}x#{params[:h]}"
+      "#{params[:w]}×#{params[:h]}"
     end
   end
 
