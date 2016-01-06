@@ -5,6 +5,8 @@
 examplesContainer = document.querySelector('.examples')
 
 imagesLoaded examplesContainer, ->
+  examplesContainer.classList.add('loaded')
+
   examplesPackery = new Packery(examplesContainer, {
     gutter: 10
   })

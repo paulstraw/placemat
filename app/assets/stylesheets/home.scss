@@ -46,6 +46,14 @@ header {
 .examples {
   max-width: 730px;
   margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 450ms ease-out;
+
+  &.loaded {
+    opacity: 1;
+    visibility: visible;
+  }
 
   img {
     max-width: 100%;
@@ -56,6 +64,10 @@ a {
   color: #E3E7EF;
   position: relative;
   text-decoration: none;
+
+  &.imgix:after {
+    background-color: #F97541;
+  }
 
   &:after {
     content: "";
