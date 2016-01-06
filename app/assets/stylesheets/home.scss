@@ -9,14 +9,16 @@ a { -webkit-tap-highlight-color: #2B2E36; }
 body {
   background: #2B2E36;
   color: #E3E7EF;
-  font-size: 24px;
-  line-height: 38px;
+  font-size: 17px;
+  line-height: 26px;
 }
 
 header {
   text-align: center;
   max-width: 960px;
   margin: 2em auto;
+  font-size: 24px;
+  line-height: 38px;
 
   h1, h2 {
     text-transform: uppercase;
@@ -73,5 +75,78 @@ a {
   }
   &:active {
     top: 1px;
+  }
+}
+
+.credits {
+  list-style: none;
+  max-width: 730px;
+  margin: 4em auto;
+  font-size: 14px;
+  line-height: 21px;
+
+  li {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    &:after {
+      height: 2px;
+      bottom: 2px;
+    }
+
+    &:hover:after {
+      height: 10px;
+    }
+  }
+}
+
+@media (min-width: 580px) and (max-width: 759px) {
+  header {
+    h1 {
+      font-size: 81px;
+    }
+
+    h2 {
+      font-size: 27px;
+    }
+
+    p {
+      max-width: 480px;
+      font-size: 22px;
+      line-height: 36px;
+    }
+  }
+
+  .examples, .credits {
+    max-width: 570px;
+  }
+}
+
+@media (max-width: 579px) {
+  header {
+    h1 {
+      font-size: 57px;
+    }
+
+    h2 {
+      font-size: 19px;
+    }
+
+    p {
+      max-width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  .examples, .credits {
+    max-width: 310px;
   }
 }

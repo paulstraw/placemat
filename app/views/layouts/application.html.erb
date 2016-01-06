@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Placemat</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Pretty Nice Placeholders™">
+    <meta name="designer" content="Paul Straw">
+    <meta name="developer" content="Paul Straw">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
-  <script src="https://use.typekit.net/qmx8cix.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-<body>
-  <%= yield %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</body>
+    <title>Placemat</title>
+
+    <link rel="shortcut icon" href="">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <script src="https://use.typekit.net/qmx8cix.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </body>
 </html>
