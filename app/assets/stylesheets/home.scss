@@ -60,6 +60,41 @@ header {
   }
 }
 
+.usage {
+  margin: 2em auto 0;
+  max-width: 730px;
+  font-size: 16px;
+  line-height: 24px;
+
+  code {
+    background: #141619;
+    padding: 0 4px;
+    font-size: 15px;
+    line-height: 21px;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  dl {
+    dt {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 1.5em 0 0.7em;
+
+      code {
+        font-size: 21px;
+        line-height: 27px;
+        padding: 0 6px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
 a {
   color: #E3E7EF;
   position: relative;
@@ -134,7 +169,7 @@ a {
     }
   }
 
-  .examples, .credits {
+  .examples, .usage, .credits {
     max-width: 570px;
   }
 }
@@ -158,7 +193,20 @@ a {
     }
   }
 
-  .examples, .credits {
+  .examples, .usage, .credits {
     max-width: 310px;
+  }
+
+  .usage {
+    dl {
+      dt {
+        font-size: 18px;
+
+        code {
+          font-size: 16px;
+          line-height: 21px;
+        }
+      }
+    }
   }
 }

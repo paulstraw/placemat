@@ -65,9 +65,8 @@ private
 
   def ix_overlay_params
     {
-      bm: 'multiply',
-      blend: params[:overlay_color] || 'ACACAC',
-      balph: 100 || params[:overlay_opacity]
+      bm: params[:overlay_blend] || 'multiply',
+      blend: params[:overlay_color] || 'ACACAC'
     }
   end
 

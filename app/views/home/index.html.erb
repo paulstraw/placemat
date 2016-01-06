@@ -12,8 +12,37 @@
   <img src="/people?w=150&amp;h=150&amp;random=1">
   <img src="/things?w=310&amp;h=200">
   <img src="/things?w=150&amp;h=250&amp;txt=0">
-  <img src="/places?w=730&amp;h=200&amp;random=1&amp;txt=Custom+Text+and+Overlays&amp;overlay_color=256891&amp;overlay_opacity=50">
+  <img src="/places?w=730&amp;h=200&amp;random=1&amp;txt=Custom+Text+and+Overlays&amp;txtclr=44E3E7EF&amp;overlay_color=B12B2E36&amp;overlay_blend=normal">
 </div>
+
+<article class="usage">
+  <h3>Here's how to use it</h3>
+
+  <p>The three current endpoints are <code>https://placem.at/people</code>, <code>https://placem.at/places</code>, and <code>https://placem.at/things</code>. Any one of those will actually give you a valid image back on its own, but you probably want to do something a little bit fancier. The good news is that all three endpoints accept the same parameters, so there's not too much to remember. Everything is controlled via a few simple query string parameters:</p>
+
+  <dl>
+    <dt><code>w</code> Width</dt>
+    <dd>Specifies the width of the returned image. Can be used alone, or alongside <code>h</code>. A number in pixels.</dd>
+
+    <dt><code>h</code> Height</dt>
+    <dd>Specifies the height of the returned image. Can be used alone, or alongside <code>w</code>. A number in pixels.</dd>
+
+    <dt><code>random</code> Random</dt>
+    <dd>By default, Placemat will always return the same image for a given size. If you want to mix things up a bit, pass <code>random=1</code>. This tends to be especially handy for the <code>/people</code> endpoint.</dd>
+
+    <dt><code>txt</code> Text</dt>
+    <dd>Placemat will add your requested dimensions to the returned image by default, but you can bypass that by passing <code>txt=0</code>. If you want to display custom text, just send along something like <code>txt=Hello+World</code>!</dd>
+
+    <dt><code>txtclr</code> Text Color</dt>
+    <dd>Change the displayed text color. Accepts a 3 (RGB), 4 (ARGB), 6 (RRGGBB), or 8 digit (AARRGGBB) hexadecimal value. The first two digits of an 8 digit hex value represent the color's alpha transparency. Defaults to <code>BFFF</code>.</dd>
+
+    <dt><code>overlay_color</code> Overlay Color</dt>
+    <dd>Defines a custom overlay color. Accepts a 3 (RGB), 6 (RRGGBB) or 8 digit (AARRGGBB) hexidecimal value. The first two digits of an 8 digit hex value represent the color's alpha transparency. Defaults to <code>ACACAC</code></dd>
+
+    <dt><code>overlay_blend</code> Overlay Blend Mode</dt>
+    <dd>Allows changing the overlay's blend mode. Defaults to <code>multiply</code>, and can be assigned to any of the <a href="https://www.imgix.com/docs/reference/blend#param-blendmode">imgix blend modes</a>.</dd>
+  </dl>
+</article>
 
 <ul class="credits">
   <li>Places and things courtesy of <a href="http://unsplash.com">Unsplash</a>.</li>
