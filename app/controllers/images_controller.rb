@@ -21,9 +21,13 @@ private
   end
 
   def text
-    params[:txt] == '0' || (params[:w].nil? && params[:h].nil?) ?
-      '' :
+    if params[:txt] == '0' || (params[:w].nil? && params[:h].nil?)
+      ''
+    elsif params[:txt]
+      params[:txt]
+    else
       "#{params[:w]}x#{params[:h]}"
+    end
   end
 
   def requested_size
