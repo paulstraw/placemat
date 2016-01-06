@@ -46,7 +46,6 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (8.2.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -88,6 +87,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.2)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -155,11 +155,11 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 1.6)
-  byebug
   coffee-rails (~> 4.1.0)
   imgix (~> 1.0.0)
   jbuilder (~> 2.0)
   paperclip (~> 4.3.2)
+  pg
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
