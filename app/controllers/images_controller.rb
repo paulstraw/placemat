@@ -1,32 +1,23 @@
 class ImagesController < ApplicationController
-  before_action :ensure_required_params
+  # def color
 
-  def person
-    img = PlaceholderImage.person.closest_to_size(**requested_size).first
-    redirect_to ix_url(placeholder_image: img), status: 301
-  end
+  # end
 
-  def place
-    img = PlaceholderImage.place.closest_to_size(**requested_size).first
-    redirect_to ix_url(placeholder_image: img), status: 301
-  end
-
-  def thing
-
-  end
-
-  def idea
-
-  end
-
-  def color
-
+  def from_category
+    placeholder_image = get_placeholder_image
+    redirect_to ix_url(placeholder_image: placeholder_image), status: 301
   end
 
 private
-  def ensure_required_params
-    if params[:w].nil? || params[:h].nil?
-      render text: 'Both the `w` and `h` params are required.', status: 422
+  def get_placeholder_image
+    categorized_images = PlaceholderImage.send(params[:category].to_sym)
+
+    if params[:w].nil? && params[:h].nil?
+      @text = ''
+      categorized_images.random
+    else
+      @text = "#{params[:w]}x#{params[:h]}"
+      categorized_images.closest_to_size(**requested_size).first
     end
   end
 
@@ -35,27 +26,42 @@ private
   end
 
   def ix_text_params
+    text = params[:txt] || @text
+
     {
-      txt: params[:txt],
-      txtclr: params[:txtclr] || 'fff',
+      txt: text,
+      txtclr: params[:txtclr] || 'BFFF',
       txtalign: 'middle,center',
       txtfit: 'max',
-      txtsize: 50,
+      txtsize: 42,
       txtfont: 'Avenir Next Demi,Bold'
     }
   end
 
-  def ix_overlay_params
-    overlay_params = {
-      bm: 'normal',
-      blend: params[:overlay_color]
+  def ix_mark_params
+    # TODO currently adding any special characters (even stuff like `.`)
+    # confuses either the ~text endpoint, or imgix-rb
+    color = params[:txtclr] || '7FFF'
+    mark_url = client.path('/~text').to_url({
+      # txt: 'http://placem.at',
+      txtalign: 'right',
+      # txtfont: 'Avenir Next Demi,Bold',
+      txtclr: color,
+      txtsize: 12
+    })
+
+    {
+      mark: mark_url,
+      markalign: 'bottom,right'
     }
+  end
 
-    if params[:overlay_opacity].present?
-      overlay_params[:balph] = params[:overlay_opacity]
-    end
-
-    overlay_params
+  def ix_overlay_params
+    {
+      bm: 'multiply',
+      blend: params[:overlay_color] || 'ACACAC',
+      balph: 100 || params[:overlay_opacity]
+    }
   end
 
   def ix_params
@@ -63,22 +69,24 @@ private
       w: params[:w],
       h: params[:h],
       fm: 'auto',
-      crop: 'entropy',
+      crop: 'faces,entropy',
       fit: 'crop'
     }
 
-    param_hash.merge! ix_text_params if params[:txt].present?
-    param_hash.merge! ix_overlay_params if params[:overlay_color].present?
+    param_hash.merge! ix_text_params
+    param_hash.merge! ix_overlay_params
 
     param_hash
   end
 
-  def ix_url(placeholder_image:)
-    client = Imgix::Client.new({
+  def client
+    @client ||= Imgix::Client.new({
       host: Rails.configuration.imgix['host'],
       secure_url_token: Rails.configuration.imgix['secure_url_token']
     })
+  end
 
+  def ix_url(placeholder_image:)
     path = client.path(placeholder_image.image.path)
     path.to_url(ix_params)
   end

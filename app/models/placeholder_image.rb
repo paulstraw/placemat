@@ -23,12 +23,13 @@ class PlaceholderImage < ActiveRecord::Base
     order("ABS(native_width - #{w}) + ABS(native_height - #{h})")
   end
 
-  def self.create_or_update_by_url_and_category!(url, category)
+  def self.maybe_create_from_url_and_category(url:, category:)
     url_hash = Digest::MD5.hexdigest(url)
+    return if exists?(url_hash: url_hash)
 
-    placeholder_image = find_or_initialize_by(url_hash: Digest::MD5.hexdigest(url))
+    placeholder_image = new(url_hash: Digest::MD5.hexdigest(url))
 
-    placeholder_image.image_category = :places
+    placeholder_image.image_category = category
 
     placeholder_image.image_remote_url = url
     placeholder_image.url_hash = url_hash
@@ -45,7 +46,7 @@ class PlaceholderImage < ActiveRecord::Base
     placeholder_image.native_width = rand(50..actual_width).to_i
     placeholder_image.native_height = (actual_height * (placeholder_image.native_width / actual_width)).to_i
 
-    placeholder_image.save!
+    placeholder_image.save
   end
 
   def image_remote_url=(url)

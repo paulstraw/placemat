@@ -1,3 +1,77 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+html { overflow-y: scroll; } // Always show scrollbar in non-IE
+body, input, select, textarea, button { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-family: "proxima-nova", sans-serif; }
+
+a { -webkit-tap-highlight-color: #2B2E36; }
+::-moz-selection { background: #2B2E36; color: #fff; text-shadow: none; }
+::selection { background: #2B2E36; color: #fff; text-shadow: none; }
+
+body {
+  background: #2B2E36;
+  color: #E3E7EF;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+header {
+  text-align: center;
+  max-width: 960px;
+  margin: 2em auto;
+
+  h1, h2 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 120px;
+    letter-spacing: 0.01em;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: normal;
+    color: #666D7F;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 2em auto 0;
+  }
+}
+
+.examples {
+  max-width: 730px;
+  margin: 0 auto;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+a {
+  color: #E3E7EF;
+  position: relative;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    background-color: #666D7F;
+    height: 4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    z-index: -1;
+    transition: all 120ms ease-out;
+  }
+
+  &:hover:after {
+    height: 18px;
+  }
+  &:active {
+    top: 1px;
+  }
+}
