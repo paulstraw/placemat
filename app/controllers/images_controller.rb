@@ -87,8 +87,8 @@ private
 
   def client
     @client ||= Imgix::Client.new({
-      host: Rails.configuration.imgix['host'],
-      secure_url_token: Rails.configuration.imgix['secure_url_token']
+      host: ENV['ix_host'],
+      secure_url_token: ENV['ix_secure_url_token']
     })
   end
 

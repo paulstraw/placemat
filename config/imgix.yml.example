@@ -1,9 +1,9 @@
 production:
-  host: your-production-source.imgix.net
-  secure_url_token: f00barproductiontoken
+  ix_host: your-production-source.imgix.net
+  ix_secure_url_token: f00barproductiontoken
 development:
-  host: your-development-source.imgix.net
-  secure_url_token: f00bardevelopmenttoken
+  ix_host: your-development-source.imgix.net
+  ix_secure_url_token: f00bardevelopmenttoken
 test:
-  host: your-test-source.imgix.net
-  secure_url_token: f00bartesttoken
+  ix_host: your-test-source.imgix.net
+  ix_secure_url_token: f00bartesttoken

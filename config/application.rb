@@ -24,17 +24,17 @@ module Placemat
     config.active_record.raise_in_transactional_callbacks = true
 
     # Pull in imgix and paperclip configs
-    config.imgix = Rails.application.config_for(:imgix)
-    config.s3 = Rails.application.config_for(:s3)
+    ENV.update YAML.load_file('config/imgix.yml')[Rails.env] rescue {}
+    ENV.update YAML.load_file('config/s3.yml')[Rails.env] rescue {}
 
     # paperclip config
     config.paperclip_defaults = {
         use_timestamp: false, # the cache buster shouldn't be needed, because imgix
         storage: :s3,
         s3_credentials: {
-          bucket: Rails.configuration.s3['bucket'],
-          access_key_id: Rails.configuration.s3['access_key_id'],
-          secret_access_key: Rails.configuration.s3['secret_access_key'],
+          bucket: ENV['s3_bucket'],
+          access_key_id: ENV['s3_access_key_id'],
+          secret_access_key: ENV['s3_secret_access_key']
         }
     }
   end
