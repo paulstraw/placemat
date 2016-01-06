@@ -48,7 +48,29 @@ place_images = [
   'https://images.unsplash.com/photo-1436377734980-0ee004df570b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=6344522c2154913e9c551f84a9861117',
   'https://images.unsplash.com/photo-1433616174899-f847df236857?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c4f5e9af45a4fc52836ec670ea3820a6',
   'https://images.unsplash.com/photo-1433148749784-5e235e9efd12?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a8718d192afc0239226e87929c05825d',
-  'https://images.unsplash.com/photo-1437240443155-612416af4d5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=11abf6df6b03170cbdde7944c5de7f57'
+  'https://images.unsplash.com/photo-1437240443155-612416af4d5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=11abf6df6b03170cbdde7944c5de7f57',
+  'https://images.unsplash.com/photo-1441966055611-30ea468880a2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=08ce29b90f1b3a56d51a3cf5b074072f',
+  'https://images.unsplash.com/photo-1440847899694-90043f91c7f9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=54f9ba66ae452bb286cb7fc8b1752a71',
+  'https://images.unsplash.com/photo-1438368915865-a852ef86fc42?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d8f9b3d5e4b6d8f1d79dfedd948b86f6',
+  'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=df6386c2e327ae9dbc7e5be0bef4e1d6',
+  'https://images.unsplash.com/photo-1434394673726-e8232a5903b4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9049626ecd06905fcfd5f129874b05cf',
+  'https://images.unsplash.com/photo-1431730524508-b2f28f2b793a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=66d6c6c6530adc3a910b968747b3f9ca',
+  'https://images.unsplash.com/photo-1428953773181-b4cf23cd7195?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=719b24467ce67b41f39296f86fc62a60',
+  'https://images.unsplash.com/photo-1428342109953-409d2876cdab?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2f6d3882aa9b91c451749091599db236',
+  'https://images.unsplash.com/photo-1430132594682-16e1185b17c5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c9484e69616b805faaf0dcc84711b77a',
+  'https://images.unsplash.com/uploads/14126758789351371c7ec/aa322c2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d82582d98dc7e3b43d2c0760566e5218',
+  'https://images.unsplash.com/photo-1423683249427-8ca22bd873e0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=79b9ad5149caaadd7e0ce1c315612220',
+  'https://images.unsplash.com/photo-1417128281290-30a42da46277?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ed2e06bb0cd762c216cfb2c4fa10e8ad',
+  'https://images.unsplash.com/photo-1414005987108-a6d06de8769f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=75231aea5223b76d20bd8a7e0777de4d',
+  'https://images.unsplash.com/reserve/TxbDzeAhRmCwa6DDrbOQ_kazan-big.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ac85a3d0e32f07f460d28ac0202f4d1b',
+  'https://images.unsplash.com/uploads/14115890754139bc8568d/d5e1ad1d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=b8ab5289c8fa1ff2c44f239db53b324a',
+  'https://images.unsplash.com/photo-1418562478514-6ee501b780a5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=61812e82e50b202bb55c01e545a42f47',
+  'https://images.unsplash.com/uploads/1412594480669535c9ef9/9d85c477?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f32b30b3cef27d88f313ae0703b18e70',
+  'https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c613a3d10d3288bb27175f7bbb6d3693',
+  'https://images.unsplash.com/photo-1415226481302-c40f24f4d45e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9613ef768d94dac1d1011f0d146cc8a1',
+  'https://images.unsplash.com/reserve/HgZuGu3gSD6db21T3lxm_San%20Zenone.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=dc9182de46c8c34cc6eb92b8ff242c13',
+  'https://images.unsplash.com/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ca11afbdc71bbaa6a141448b60879047',
+  'https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d987accf6b91b1136c2a9a803d6afb75'
 ]
 
 place_images.each do |url|
