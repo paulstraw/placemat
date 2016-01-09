@@ -12,7 +12,7 @@
   <img src="/people?w=150&amp;h=150&amp;random=1">
   <img src="/things?w=310&amp;h=200">
   <img src="/things?w=150&amp;h=250&amp;txt=0">
-  <img src="/places?w=730&amp;h=200&amp;random=1&amp;txt=Custom+Text+and+Overlays&amp;txtclr=44E3E7EF&amp;overlay_color=B12B2E36&amp;overlay_blend=normal">
+  <img src="/places?w=730&amp;h=200&amp;random=4&amp;txt=Custom+Text+and+Overlays&amp;txtclr=44E3E7EF&amp;overlay_color=B12B2E36&amp;overlay_blend=normal">
 </div>
 
 <article class="usage">
@@ -28,7 +28,7 @@
     <dd>Specifies the height of the returned image. Can be used alone, or alongside <code>w</code>. A number in pixels.</dd>
 
     <dt><code>random</code> Random</dt>
-    <dd>By default, Placemat will always return the same image for a given size. If you want to mix things up a bit, pass <code>random=1</code>. This tends to be especially handy for the <code>/people</code> endpoint.</dd>
+    <dd>By default, Placemat will always return the same image for a given size. If you want to mix things up a bit, pass <code>random=1</code>. If you want to get the same "random" image every time, pass any other value for <code>random</code>, e.g. <code>random=hello</code> or <code>random=2</code>. This tends to be especially handy for the <code>/people</code> endpoint.</dd>
 
     <dt><code>txt</code> Text</dt>
     <dd>Placemat will add your requested dimensions to the returned image by default, but you can bypass that by passing <code>txt=0</code>. If you want to display custom text, just send along something like <code>txt=Hello+World</code>!</dd>

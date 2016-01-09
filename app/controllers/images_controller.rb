@@ -13,7 +13,11 @@ private
     categorized_images = PlaceholderImage.send(params[:category].to_sym)
 
     if params[:random] == '1' || (params[:w].nil? && params[:h].nil?)
-      categorized_images.random
+      categorized_images.order_by_rand.first
+    elsif params[:random].present?
+      random_seed = Digest::MD5.hexdigest(params[:random])[0..3].to_i(16)
+
+      categorized_images.order_by_rand(seed: random_seed).first
     else
       categorized_images.closest_to_size(**requested_size).first
     end
