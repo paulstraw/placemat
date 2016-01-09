@@ -88,6 +88,7 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.2)
+    puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -160,6 +161,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   paperclip (~> 4.3.2)
   pg
+  puma (~> 2.15.3)
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
