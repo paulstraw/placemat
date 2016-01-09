@@ -90,7 +90,12 @@ place_images = [
   'https://images.unsplash.com/photo-1415639636295-61ae91a98b39?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0ee7abb75bfefdc5f2121e61b0f8776c',
   'https://images.unsplash.com/uploads/141327328038701afeede/eda0fb7c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=729c16e793550c1ee2666ac6dacfd228',
   'https://images.unsplash.com/photo-1414170562806-9d670e90c091?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f858db9a13953d4dfb0d81f24c35c270',
-  'https://images.unsplash.com/reserve/oY3ayprWQlewtG7N4OXl_DSC_5225-2.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=37be07cba5dc683a0b13cf14ae1e5724'
+  'https://images.unsplash.com/reserve/oY3ayprWQlewtG7N4OXl_DSC_5225-2.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=37be07cba5dc683a0b13cf14ae1e5724',
+  'http://farm3.staticflickr.com/2933/14520130909_391ddc4440_b.jpg',
+  'http://farm4.staticflickr.com/3916/14706475542_05fe947d46_b.jpg',
+  'http://farm3.staticflickr.com/2900/14519820247_69c6d3a268_b.jpg',
+  'http://farm3.staticflickr.com/2925/14520142738_fa72e087a4_b.jpg',
+  'http://farm6.staticflickr.com/5595/14706508492_191d5bfeb3_b.jpg'
 ]
 
 place_images.each do |url|
@@ -159,7 +164,9 @@ person_images = [
   'https://farm8.staticflickr.com/7436/9237738387_35c3450717_b.jpg',
   'https://farm8.staticflickr.com/7321/8747649423_1d1968d1ac_b.jpg',
   'https://farm9.staticflickr.com/8119/8744776671_886a8c714d_b.jpg',
-  'https://farm9.staticflickr.com/8137/8714847212_75f5aa3018_b.jpg'
+  'https://farm9.staticflickr.com/8137/8714847212_75f5aa3018_b.jpg',
+  'http://farm3.staticflickr.com/2926/14131505329_90286b9a8c_b.jpg',
+  'http://farm4.staticflickr.com/3826/14314859771_70e12b98ea_b.jpg'
 ]
 
 person_images.each do |url|
@@ -254,6 +261,20 @@ thing_images = [
   'https://images.unsplash.com/photo-1448697138198-9aa6d0d84bf4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=601bafcd21856c7bd2b000da6b56def2',
   'https://images.unsplash.com/photo-1448582649076-3981753123b5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=43f2551f7e901de32cda71adf7d36840',
   'https://images.unsplash.com/photo-1448652791446-27b1beaae784?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4af24b053031ec87e084457bb7aec5e2',
+  'http://farm6.staticflickr.com/5594/14519620268_e4f52aea4a_b.jpg',
+  'http://farm4.staticflickr.com/3878/14519611638_05ff3f2f69_b.jpg',
+  'http://farm4.staticflickr.com/3920/14683274086_7759baab7b_b.jpg',
+  'http://farm4.staticflickr.com/3912/14519582870_dbc316206c_b.jpg',
+  'http://farm3.staticflickr.com/2912/14519600789_cc7177cac7_b.jpg',
+  'http://farm4.staticflickr.com/3903/14726790703_651229abd1_b.jpg',
+  'http://farm4.staticflickr.com/3908/14706630832_5d9c169593_b.jpg',
+  'http://farm4.staticflickr.com/3850/14726780533_6b0db6fd59_b.jpg',
+  'http://farm4.staticflickr.com/3841/14520165640_b00d9647fc_b.jpg',
+  'http://farm4.staticflickr.com/3918/14683827076_350257d321_b.jpg',
+  'http://farm4.staticflickr.com/3859/14703645541_75429b1395_b.jpg',
+  'http://farm3.staticflickr.com/2931/14706810255_269624622e_b.jpg',
+  'http://farm4.staticflickr.com/3862/14706518762_fff0677f5d_b.jpg',
+  'http://farm4.staticflickr.com/3917/14722984252_6b53b6a2e3_b.jpg'
 ]
 
 thing_images.each do |url|
