@@ -1,8 +1,4 @@
 class ImagesController < ApplicationController
-  # def color
-
-  # end
-
   def from_category
     placeholder_image = get_placeholder_image
     redirect_to ix_url(placeholder_image: placeholder_image), status: 301
@@ -25,7 +21,7 @@ private
   end
 
   def text
-    if params[:txt] == '0' || (params[:w].nil? && params[:h].nil?)
+    if params[:txt] == '0' || (!params[:txt].present? && params[:w].nil? && params[:h].nil?)
       ''
     elsif params[:txt]
       params[:txt]
