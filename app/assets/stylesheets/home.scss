@@ -90,6 +90,13 @@ header {
         line-height: 27px;
         padding: 0 6px;
         font-weight: normal;
+
+        &.example {
+          font-size: 14px;
+          line-height: 21px;
+          padding: 0 4px;
+          word-break: break-all;
+        }
       }
     }
   }
@@ -205,6 +212,10 @@ a {
         code {
           font-size: 16px;
           line-height: 21px;
+
+          &.example {
+            margin-top: 3px;
+          }
         }
       }
     }
